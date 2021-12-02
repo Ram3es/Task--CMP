@@ -1,0 +1,19 @@
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 20px;
+  line-height: 24px;
+  min-width: 320px;
+
+}

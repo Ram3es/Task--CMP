@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { BoardContainers } from "./Containers";
+import { useDispatch } from "react-redux";
+import { A_FetchCountryRequest  } from "./Containers"
 
-function App() {
+const App = () => {
+  const dispatch = useDispatch();
+  useEffect(()=>{
+    dispatch(A_FetchCountryRequest())
+  },[dispatch])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BoardContainers />
+  )
 }
 
 export default App;
