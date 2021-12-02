@@ -2,9 +2,6 @@ import useStyles from "./styles";
 import {  Divider } from "@mui/material"
 const CountryItem = ({Country, idx, confirmed}) =>{
   const classes = useStyles();
-  
-     
-
     return (
      <div>
         <div className={classes.toolbar}>

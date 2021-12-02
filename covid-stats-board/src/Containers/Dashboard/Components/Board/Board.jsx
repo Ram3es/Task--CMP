@@ -11,7 +11,7 @@ const Board = () =>{
         <Divider  classes={{root:classes.divider}} orientation="vertical" variant="fullWidth" flexItem />
         <div style={{width:"40%"}}><h3>Country</h3></div>
         <Divider classes={{root:classes.divider}} orientation="vertical" variant="fullWidth" flexItem  />
-        <div style={{width:"40%"}}><h3>Total Confirmed</h3></div>
+        <div style={{width:"41%"}}><h3>Total Confirmed</h3></div>
         </div>
       
     </div>
