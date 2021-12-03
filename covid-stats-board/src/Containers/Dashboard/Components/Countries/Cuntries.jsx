@@ -4,13 +4,13 @@ import { useSelector } from "react-redux";
 import { getAllCountries } from "../../store"
 import useStyles from "./styles"
 
-const Countries = () =>{
+const Countries = (props) =>{
     const countryList = useSelector(getAllCountries())
     const classes = useStyles()
 
     const renderCountry = useMemo(()=> {
-        return countryList?.map( (item, idx) => <CountryItem key={item.Slug} {...item} idx={idx} />)
-    },[countryList])
+        return countryList?.map( (item, idx) => <CountryItem key={item.Slug} {...item } idx={idx} {...props}/>)
+    },[countryList, props])
 
  return <div className={classes.item}>{renderCountry}</div>
 }
