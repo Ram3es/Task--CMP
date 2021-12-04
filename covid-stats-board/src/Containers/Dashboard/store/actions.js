@@ -16,3 +16,4 @@ export const A_FetchCountriesRequest = () => {
 };
 
 export const A_FetchCountySuccess = (payload) => ({ type: countryConst.FETCH_COUNTRY.SUCCESS, payload });
+export const A_FindCountySuccess = (payload) => ({ type: countryConst.FIND_COUNTRY.SUCCESS, payload });
