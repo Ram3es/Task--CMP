@@ -1,3 +1,3 @@
-export * from "./Components"
-export * from "./Containers"
-export * from "./store"
+export * from "./Components";
+export * from "./Containers";
+export * from "./store";

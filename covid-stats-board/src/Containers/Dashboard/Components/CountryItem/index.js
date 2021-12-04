@@ -1,1 +1,1 @@
-export {default as CountryItem } from "./CountryItem"
+export { default as CountryItem } from "./CountryItem";
