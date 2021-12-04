@@ -16,4 +16,12 @@ export default makeStyles((theme) => ({
     color: "black",
     boxShadow: " 0px 2px 4px rgba(0, 0, 0, 0.25)",
   },
+  numeric: {
+    padding: "7px",
+    marginLeft: "22px",
+    width: "30px",
+  },
+  label: {
+    width: "40%",
+  },
 }));

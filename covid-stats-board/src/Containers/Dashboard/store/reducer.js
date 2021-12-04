@@ -2,6 +2,12 @@ import { countryConst } from "./constants";
 
 const initialstate = {
   countries: [],
+  country: {
+    Country: "",
+    TotalConfirmed: "",
+    TotalDeath: "",
+    TotalRecovered: "",
+  },
   loading: false,
   error: null,
 };
@@ -16,6 +22,8 @@ export const boardReducer = (state = initialstate, action) => {
         loading: false,
         countries: action.payload,
       };
+    case countryConst.FETCH_COUNTRY.SUCCESS:
+      return { ...state, country: action.payload };
     case countryConst.FETCH_COUNTRIES.FAILURE:
       return {
         ...state,

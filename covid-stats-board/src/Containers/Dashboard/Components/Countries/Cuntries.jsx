@@ -9,8 +9,8 @@ const Countries = (props) => {
   const classes = useStyles();
 
   const renderCountry = useMemo(() => {
-    return countryList?.map((item, idx) => <CountryItem key={item.Slug} {...item} idx={idx} {...props} />);
-  }, [countryList, props]);
+    return countryList?.map((item, idx) => <CountryItem key={item.ID} {...item} idx={idx} {...props} />);
+  }, [countryList]);
 
   return <div className={classes.item}>{renderCountry}</div>;
 };

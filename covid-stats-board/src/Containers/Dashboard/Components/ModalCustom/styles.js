@@ -37,4 +37,7 @@ export default makeStyles((theme) => ({
   data: {
     marginRight: "20px",
   },
+  h2: {
+    marginLeft: "15px",
+  },
 }));
