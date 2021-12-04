@@ -1,1 +1,1 @@
-export * from "./capitalized"
+export * from "./capitalized";

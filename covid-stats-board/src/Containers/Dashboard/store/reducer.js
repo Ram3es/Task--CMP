@@ -8,9 +8,9 @@ const initialstate = {
     TotalDeath: "",
     TotalRecovered: "",
   },
-  advancedSearch:{
-   searchStr:"",
-   orderBy:""
+  advancedSearch: {
+    searchStr: "",
+    orderBy: "asc",
   },
   loading: false,
   error: null,
@@ -21,7 +21,9 @@ export const boardReducer = (state = initialstate, action) => {
     case countryConst.FETCH_COUNTRIES.REQUEST:
       return { ...state, loading: true };
     case countryConst.FIND_COUNTRY.SUCCESS:
-      return{...state, advancedSearch:{...state.advancedSearch, ...action.payload} }
+    case countryConst.SORT_LIST.SUCCESS:
+      return { ...state, advancedSearch: { ...state.advancedSearch, ...action.payload } };
+
     case countryConst.FETCH_COUNTRIES.SUCCESS:
       return {
         ...state,

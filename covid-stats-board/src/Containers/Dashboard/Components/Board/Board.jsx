@@ -1,5 +1,6 @@
 import { Divider } from "@mui/material";
 import useStyles from "./styles";
+import { SelectVariants } from "../SelectVariants";
 
 const Board = () => {
   const classes = useStyles();
@@ -7,16 +8,19 @@ const Board = () => {
   return (
     <div>
       <div className={classes.toolbar}>
-        <div style={{ width: "20%,", marginLeft: "30px" }}>
+        <label className={classes.numeric}>
           <h3>№</h3>
-        </div>
+        </label>
         <Divider classes={{ root: classes.divider }} orientation="vertical" variant="fullWidth" flexItem />
-        <div style={{ width: "40%" }}>
+        <div className={classes.label}>
           <h3>Country</h3>
+          <SelectVariants />
         </div>
+        <div></div>
         <Divider classes={{ root: classes.divider }} orientation="vertical" variant="fullWidth" flexItem />
-        <div style={{ width: "41%" }}>
+        <div className={classes.label}>
           <h3>Total Confirmed</h3>
+          <SelectVariants />
         </div>
       </div>
     </div>

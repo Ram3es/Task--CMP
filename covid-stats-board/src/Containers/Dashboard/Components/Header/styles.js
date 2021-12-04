@@ -9,16 +9,14 @@ export default makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     width: "100px",
-    
   },
-   container:{
-     display:"flex",
-     justifyContent:"space-between",
-     alignItems:"center",
-     width:"100%",
-   
-   },
-   search:{
-     marginRight:"100px"
-   }
+  container: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+  },
+  search: {
+    marginRight: "100px",
+  },
 }));

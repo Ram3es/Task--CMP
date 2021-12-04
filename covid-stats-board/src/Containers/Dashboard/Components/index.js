@@ -4,3 +4,4 @@ export * from "./CountryItem";
 export * from "./Countries";
 export * from "./ModalCustom";
 export * from "./SearchBar";
+export * from "./SelectVariants";

@@ -6,7 +6,6 @@ export const A_FetchCountriesRequest = () => {
   return async (dispatch) => {
     try {
       const { Countries } = await fetchCoutriesRequest();
-      console.log(Countries);
 
       dispatch({ type: countryConst.FETCH_COUNTRIES.SUCCESS, payload: Countries });
     } catch (error) {
@@ -17,3 +16,5 @@ export const A_FetchCountriesRequest = () => {
 
 export const A_FetchCountySuccess = (payload) => ({ type: countryConst.FETCH_COUNTRY.SUCCESS, payload });
 export const A_FindCountySuccess = (payload) => ({ type: countryConst.FIND_COUNTRY.SUCCESS, payload });
+
+export const A_SortList = (payload) => ({ type: countryConst.SORT_LIST.SUCCESS, payload });

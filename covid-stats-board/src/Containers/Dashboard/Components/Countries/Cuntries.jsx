@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { CountryItem } from "../CountryItem";
 import { useSelector } from "react-redux";
-import { getAllCountries, getFindedCountry} from "../../store";
+import { getAllCountries, getFindedCountry } from "../../store";
 import useStyles from "./styles";
 
 const Countries = (props) => {
