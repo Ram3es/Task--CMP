@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { CountryItem } from "../CountryItem";
 import { useSelector } from "react-redux";
-import { getAllCountries, getFindedCountry } from "../../store";
+import { getFindedCountry } from "../../store";
 import useStyles from "./styles";
 
 const Countries = (props) => {
@@ -10,7 +10,7 @@ const Countries = (props) => {
 
   const renderCountry = useMemo(() => {
     return countryList?.map((item, idx) => <CountryItem key={item.ID} {...item} idx={idx} {...props} />);
-  }, [countryList]);
+  }, [countryList, props]);
 
   return <div className={classes.item}>{renderCountry}</div>;
 };

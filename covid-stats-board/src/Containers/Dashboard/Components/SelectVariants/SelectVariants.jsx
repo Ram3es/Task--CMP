@@ -1,31 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { A_SortList } from "../../store";
-import useStyles from "./style";
 
-const SelectVariants = () => {
-  const dispatch = useDispatch();
-  const [toggle, setToggle] = useState(false);
-  const classes = useStyles();
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (WrapedComponent) => {
+  return (props) => {
+    const dispatch = useDispatch();
+    const [toggle, setToggle] = useState(false);
+    const [sortBy, setSortBy] = useState("");
 
-  useEffect(() => {
-    const orderBy = toggle ? "desc" : "asc";
-    dispatch(A_SortList({ orderBy }));
-  });
+    useEffect(() => {
+      const orderBy = toggle ? "desc" : "asc";
+      dispatch(A_SortList({ orderBy, sortBy }));
+    }, [toggle, sortBy, dispatch]);
 
-  const handleLabel = () => {
-    setToggle((state) => !state);
+    function handleLabel(name) {
+      setSortBy(name);
+      setToggle((state) => !state);
+    }
+
+    return <WrapedComponent {...props} sort={handleLabel} toggle={toggle} />;
   };
-
-  return (
-    <div onClick={handleLabel} className={classes.container}>
-      {toggle ? (
-        <img className={classes.arrow} src="./assets/icons/arrowUp.png" alt="arrow" />
-      ) : (
-        <img className={classes.arrow} src="./assets/icons/arrowDown.png" alt="arrow" />
-      )}
-    </div>
-  );
 };
-
-export default SelectVariants;

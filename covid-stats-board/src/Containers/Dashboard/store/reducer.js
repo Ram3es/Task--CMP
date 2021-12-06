@@ -11,6 +11,7 @@ const initialstate = {
   advancedSearch: {
     searchStr: "",
     orderBy: "asc",
+    sortBy: "",
   },
   loading: false,
   error: null,

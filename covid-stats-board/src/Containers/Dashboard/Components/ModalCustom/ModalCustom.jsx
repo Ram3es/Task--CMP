@@ -6,7 +6,7 @@ import { getCountryVavue } from "../../store";
 
 const ModalCustom = ({ toggle, onClose }) => {
   const classes = useStyles();
-  const { Country, TotalConfirmed, TotalRecovered, TotalDeaths } = useSelector(getCountryVavue());
+  const { Country, TotalConfirmed, TotalDeaths } = useSelector(getCountryVavue());
 
   return toggle ? (
     <Modal>

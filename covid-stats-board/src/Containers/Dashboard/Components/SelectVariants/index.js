@@ -1,1 +1,1 @@
-export { default as SelectVariants } from "./SelectVariants";
+export { default as SelectVariantsHOC } from "./SelectVariants";

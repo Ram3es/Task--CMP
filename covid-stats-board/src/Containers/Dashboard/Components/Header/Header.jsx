@@ -1,5 +1,3 @@
-import { useSelector } from "react-redux";
-import { getFindedCountry } from "../../store";
 import useStyles from "./styles";
 import { SearchBar } from "../SearchBar";
 
