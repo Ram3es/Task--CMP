@@ -1,4 +1,4 @@
-import { Header, Board, Countries, ModalCustom } from "../../";
+import { Header, BoardHeader, Countries, ModalCustom } from "../../";
 import useStyles from "./styles";
 import { useState } from "react";
 
@@ -9,10 +9,8 @@ const BoardContainers = () => {
   return (
     <div className={clasess.root}>
       <Header />
-      <div>
-        <Board />
-        <Countries openModal={setShowmodal} />
-      </div>
+      <BoardHeader />
+      <Countries openModal={setShowmodal} />
       <ModalCustom toggle={showModal} onClose={setShowmodal} />
     </div>
   );

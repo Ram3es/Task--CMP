@@ -6,11 +6,12 @@ export default makeStyles((theme) => ({
     width: "1px",
   },
   toolbar: {
+    width: "98%",
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: "5px",
+    marginBottom: "15px",
     backgroundColor: "#3d8bd9",
     borderRadius: "20px",
     color: "white",
@@ -18,14 +19,12 @@ export default makeStyles((theme) => ({
   },
   numeric: {
     padding: "7px",
-    marginLeft: "22px",
+    marginLeft: "30px",
     width: "30px",
   },
   label: {
     width: "40%",
     display: "flex",
     alignItems: "center",
-    border: "1px solid white",
   },
-  wraper: {},
 }));

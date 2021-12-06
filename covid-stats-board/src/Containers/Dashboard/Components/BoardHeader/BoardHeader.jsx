@@ -1,30 +1,32 @@
 import { Divider } from "@mui/material";
 import useStyles from "./styles";
-import { SelectVariants } from "../SelectVariants";
+import { SortByCountry, SortByConfirmed } from "../SortByValue";
 
-const Board = () => {
+const BoardHeader = () => {
   const classes = useStyles();
 
   return (
     <div>
       <div className={classes.toolbar}>
-        <label className={classes.numeric}>
-          <h3>№</h3>
-        </label>
+        <div className={classes.numeric}>
+          <label>
+            <h3>№</h3>
+          </label>
+        </div>
         <Divider classes={{ root: classes.divider }} orientation="vertical" variant="fullWidth" flexItem />
         <div className={classes.label}>
           <h3>Country</h3>
-          <SelectVariants />
+          <SortByCountry />
         </div>
         <div></div>
         <Divider classes={{ root: classes.divider }} orientation="vertical" variant="fullWidth" flexItem />
         <div className={classes.label}>
           <h3>Total Confirmed</h3>
-          <SelectVariants />
+          <SortByConfirmed />
         </div>
       </div>
     </div>
   );
 };
 
-export default Board;
+export default BoardHeader;
